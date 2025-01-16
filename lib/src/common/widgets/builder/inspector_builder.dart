@@ -1,10 +1,12 @@
 // import 'package:feedback_plus/feedback_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:ispect/ispect.dart';
 import 'package:ispect/src/common/extensions/context.dart';
 import 'package:ispect/src/common/utils/adjust_color.dart';
 import 'package:ispect/src/common/widgets/builder/performance_overlay_builder.dart';
 import 'package:ispect/src/common/widgets/feedback_body.dart';
+import 'package:ispect/src/core/core.dart';
 import 'package:ispect/src/features/inspector/inspector.dart';
 import 'package:ispect/src/features/snapshot/feedback_plus.dart';
 import 'package:provider/provider.dart';
@@ -80,8 +82,15 @@ class ISpectBuilder extends StatelessWidget {
               child = BetterFeedback(
                 themeMode:
                     context.isDarkMode ? ThemeMode.dark : ThemeMode.light,
-                // localizationsDelegates:
-                //     ISpectLocalization.localizationDelegates,
+                localizationsDelegates: const [
+                  SoraniMaterialLocalizations.delegate,
+                  SoraniWidgetLocalizations.delegate,
+                  SoraniCupertinoLocalizations.delegate,
+                  KrmanjiMaterialLocalizations.delegate,
+                  KrmanjiWidgetLocalizations.delegate,
+                  KrmanjiCupertinoLocalizations.delegate,
+                  ...GlobalMaterialLocalizations.delegates,
+                ],
                 localeOverride: ispectModel.options.locale,
                 theme: feedbackTheme ??
                     FeedbackThemeData(
