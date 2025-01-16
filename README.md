@@ -20,6 +20,20 @@ Your feedback is highly valued as it will help shape future updates and ensure t
    <span style="font-size: 0.9em"> Show some ❤️ and <a href="https://github.com/yelmuratoff/ispect.git">star the repo</a> to support the project! </span>
 </p>
 
+<p align="center">
+  <a href="https://pub.dev/packages/ispect"><img src="https://img.shields.io/pub/v/ispect.svg" alt="Pub"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
+  <a href="https://github.com/K1yoshiSho/ispect"><img src="https://hits.dwyl.com/K1yoshiSho/ispect.svg?style=flat" alt="Repository views"></a>
+  <a href="https://github.com/yelmuratoff/ispect"><img src="https://img.shields.io/github/stars/yelmuratoff/ispect?style=social" alt="Pub"></a>
+</p>
+<p align="center">
+  <a href="https://pub.dev/packages/ispect/score"><img src="https://img.shields.io/pub/likes/ispect?logo=flutter" alt="Pub likes"></a>
+  <a href="https://pub.dev/packages/ispect/score"><img src="https://img.shields.io/pub/popularity/ispect?logo=flutter" alt="Pub popularity"></a>
+  <a href="https://pub.dev/packages/ispect/score"><img src="https://img.shields.io/pub/points/ispect?logo=flutter" alt="Pub points"></a>
+</p>
+
+<br>
+
 ## Packages
 ISpect can be extended using other parts of this package <br>
 
@@ -73,7 +87,7 @@ Follow these steps to use this package
 
 ```yaml
 dependencies:
-  ispect: ^2.0.7
+  ispect: ^2.0.8
 ```
 
 ### Add import package
@@ -82,6 +96,12 @@ dependencies:
 import 'package:ispect/ispect.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 ```
+
+## Easy to use
+Simple example of use `ISpect`<br>
+You can manage ISpect using `ISpect.read(context)`.
+Put this code in your project at an screen and learn how it works. 😊
+
 
 ### Instructions for use:
 
@@ -100,6 +120,24 @@ Please, check the [example](https://github.com/yelmuratoff/ispect/tree/main/pack
 > - To add `ISpect Jira`, follow the instructions provided here [ispect_jira](https://github.com/yelmuratoff/ispect/tree/main/packages/ispect_jira).
 >
 > You can also check out an example of usage directly in [ispect_jira/example](https://github.com/yelmuratoff/ispect/tree/main/packages/ispect_jira/example).
+
+```dart
+### For change `ISpect` theme:
+```dart
+ISpect.read(context).setThemeMode(value ? ThemeMode.dark : ThemeMode.light);
+```
+
+### For handle routing (GoRouter)
+You can use `ISpectNavigatorObserver`, but in practice it does not always work correctly with the `GoRouter` package. You need add observer in each GoRoute.
+Alternatively, you can use a `listener`:
+
+```dart
+    _router.routerDelegate.addListener(() {
+      final String location =
+          _router.routerDelegate.currentConfiguration.last.matchedLocation;
+      talkerWrapper.route(location);
+    });
+```
 
 ### Referenced packages:
 A list of great packages I've used in ISpect:
