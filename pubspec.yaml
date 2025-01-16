@@ -1,6 +1,6 @@
 name: ispect
 description: "A package combining Inspector, Talker, and more from pub.dev for efficient project implementation."
-version: 2.0.10
+version: 2.0.11
 homepage: https://github.com/yelmuratoff/ispect.git
 issue_tracker: https://github.com/yelmuratoff/ispect/issues
 
@@ -41,9 +41,9 @@ dependencies:
   http: ^1.2.2
   provider: ^6.1.2
   flutter_bloc: ^8.1.6
-  slang: ^4.4.1
-  slang_flutter: ^4.4.0
-  slang_build_runner: ^4.4.0
+  slang: ^3.30.2
+  slang_flutter: ^3.30.0
+  slang_build_runner: ^3.31.0
 
 dev_dependencies:
   flutter_test:
