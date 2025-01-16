@@ -12,11 +12,10 @@ class _KurdishMaterialLocalizationsDelegate
   bool isSupported(Locale locale) => locale.languageCode == 'ckb';
 
   @override
-  Future<WidgetsLocalizations> load(Locale locale) async {
-    return SynchronousFuture<WidgetsLocalizations>(
-      SoraniWidgetLocalizations(),
-    );
-  }
+  Future<WidgetsLocalizations> load(Locale locale) async =>
+      SynchronousFuture<WidgetsLocalizations>(
+        SoraniWidgetLocalizations(),
+      );
 
   @override
   bool shouldReload(_KurdishMaterialLocalizationsDelegate old) => false;
