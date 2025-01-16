@@ -2,9 +2,9 @@ import 'ispect_localizations.dart';
 
 // ignore_for_file: type=lint
 
-/// The translations for English (`en`).
-class ISpectGeneratedLocalizationEn extends ISpectGeneratedLocalization {
-  ISpectGeneratedLocalizationEn([String locale = 'en']) : super(locale);
+/// The translations for Kurdish (`ku`).
+class ISpectGeneratedLocalizationKu extends ISpectGeneratedLocalization {
+  ISpectGeneratedLocalizationKu([String locale = 'ku']) : super(locale);
 
   @override
   String get actions => 'Actions';
