@@ -14,7 +14,7 @@ class PerformanceOverlayBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Directionality(
-        textDirection: TextDirection.ltr,
+        textDirection: Directionality.of(context),
         child: CustomPerformanceOverlay(
           enabled: isPerformanceTrackingEnabled,
           alignment: Alignment.topCenter,
